@@ -6,6 +6,7 @@ let
     awsebcli
     eksctl
     nodePackages.aws-cdk
+    s3cmd
   ];
 
   browsers = with pkgs; [
