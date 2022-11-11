@@ -9,14 +9,16 @@
       dbaeumer.vscode-eslint
       yzhang.markdown-all-in-one
       bungcip.better-toml
+      github.codespaces
       github.vscode-pull-request-github
       bbenoist.nix
+      esbenp.prettier-vscode
     ])
     ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [{
       name = "vscode-ruby";
       publisher = "wingrunr21";
       version = "0.28.0";
-      sha256 = "1f77f5f9cdf5c7e9600b38604dbd2e2e0f41767de96722463cfc1fa4262b4bbd";
+      sha256 = "sha256-H3f1+c31x+lgCzhgTb0uLg9Bdn3pZyJGPPwfpCYrS70=";
     }]
     ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [{
       name = "ruby-rubocop";
@@ -35,13 +37,26 @@
       "ruby.intellisense" = "rubyLocate";
       "ruby.useLanguageServer" = true;
       "ruby.useBundler" = true;
+      "[javascript]" = {
+        "editor.defaultFormatter" = "esbenp.prettier-vscode";
+      };
+      "[json]" = {
+        "editor.defaultFormatter" = "vscode.json-language-features";
+      };
+      "[jsonc]" = {
+        "editor.defaultFormatter" = "vscode.json-language-features";
+      };
       "[ruby]" = {
         "editor.defaultFormatter" = "rebornix.ruby";
       };
       "[vue]" = {
         "editor.defaultFormatter" = "octref.vetur";
       };
-      "window.zoomLevel" = 2;
+      "[typescript]" = {
+        "editor.defaultFormatter" = "esbenp.prettier-vscode";
+      };
+      "window.zoomLevel" = 0;
+      "diffEditor.renderSideBySide" = false;
     };
   };
 }
