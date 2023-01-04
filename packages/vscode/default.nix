@@ -13,6 +13,9 @@
       github.vscode-pull-request-github
       bbenoist.nix
       esbenp.prettier-vscode
+      ms-vsliveshare.vsliveshare
+      hashicorp.terraform
+      redhat.vscode-yaml
     ])
     ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [{
       name = "vscode-ruby";
@@ -37,6 +40,7 @@
       "ruby.intellisense" = "rubyLocate";
       "ruby.useLanguageServer" = true;
       "ruby.useBundler" = true;
+      "ruby.rubocop.useBundler" = true;
       "[javascript]" = {
         "editor.defaultFormatter" = "esbenp.prettier-vscode";
       };
@@ -46,14 +50,20 @@
       "[jsonc]" = {
         "editor.defaultFormatter" = "vscode.json-language-features";
       };
+      "[markdown]" = {
+        "editor.defaultFormatter" = "yzhang.markdown-all-in-one";
+      };
       "[ruby]" = {
         "editor.defaultFormatter" = "rebornix.ruby";
+      };
+      "[typescript]" = {
+        "editor.defaultFormatter" = "esbenp.prettier-vscode";
       };
       "[vue]" = {
         "editor.defaultFormatter" = "octref.vetur";
       };
-      "[typescript]" = {
-        "editor.defaultFormatter" = "esbenp.prettier-vscode";
+      "[yaml]" = {
+        "editor.defaultFormatter" = "redhat.vscode-yaml";
       };
       "window.zoomLevel" = 0;
       "diffEditor.renderSideBySide" = false;
