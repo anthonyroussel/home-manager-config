@@ -53,15 +53,15 @@
   };
   fonts.fontconfig.enable = true;
 
-  home.packages = with pkgs; [
-    gnomeExtensions.applications-menu
-    gnomeExtensions.disconnect-wifi
-    gnomeExtensions.openweather
-    gnomeExtensions.places-status-indicator
-    gnomeExtensions.removable-drive-menu
-    gnomeExtensions.sound-output-device-chooser
-    gnomeExtensions.user-themes
-    gnomeExtensions.vitals
-    gnomeExtensions.workspace-indicator
+  home.packages = with pkgs.gnomeExtensions; [
+    applications-menu
+    disconnect-wifi
+    openweather
+    places-status-indicator
+    removable-drive-menu
+    sound-output-device-chooser
+    user-themes
+    vitals
+    workspace-indicator
   ];
 }
