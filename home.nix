@@ -40,6 +40,7 @@ in
     ./packages/nixpkgs-config
     ./packages/opengl
     ./packages/tmpfiles
+    ./packages/vim
     ./packages/vscode
     ./packages/xdg
     ./packages/xsession
