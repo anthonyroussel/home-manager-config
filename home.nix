@@ -31,7 +31,6 @@ in {
     ./packages/chrome
     ./packages/desktop
     ./packages/direnv
-    ./packages/home-manager
     ./packages/gpg-agent
     ./packages/nixpkgs-config
     ./packages/opengl
