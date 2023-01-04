@@ -20,8 +20,10 @@
     mimeApps = {
       enable = true;
       defaultApplications = config.lib.xdg.mimeAssociations [
-        pkgs.google-chrome
+        pkgs.brave
         pkgs.inkscape
+        pkgs.gimp
+        pkgs.slack
       ];
     };
   };
