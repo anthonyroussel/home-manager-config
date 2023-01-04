@@ -30,7 +30,8 @@ let
     nload
   ];
 
-in {
+in
+{
   imports = [
     ./packages/chrome
     ./packages/desktop

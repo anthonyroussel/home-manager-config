@@ -24,10 +24,10 @@
     };
     "org/gnome/desktop/wm/keybindings" = {
       # Change Alt-Tab shortcut to switch windows.
-      switch-applications = ["<Super>Tab"];
-      switch-applications-backward = ["<Shift><Super>Tab"];
-      switch-windows = ["<Alt>Tab"];
-      switch-windows-backward = ["<Shift><Alt>Tab"];
+      switch-applications = [ "<Super>Tab" ];
+      switch-applications-backward = [ "<Shift><Super>Tab" ];
+      switch-windows = [ "<Alt>Tab" ];
+      switch-windows-backward = [ "<Shift><Alt>Tab" ];
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/aws-mfa" = {
       name = "aws-otp";
@@ -35,8 +35,8 @@
       command = "${pkgs.bash}/bin/bash -c \"${pkgs.oath-toolkit}/bin/oathtool --totp --base32 $(${pkgs.gopass}/bin/gopass -o corp/aws-mfa) | ${pkgs.xclip}/bin/xclip -selection clipboard\"";
     };
     "org/gnome/settings-daemon/plugins/media-keys" = {
-      logout = [];
-      power = ["<Control><Alt>Delete"];
+      logout = [ ];
+      power = [ "<Control><Alt>Delete" ];
       custom-keybindings = [
         "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/aws-mfa/"
       ];
