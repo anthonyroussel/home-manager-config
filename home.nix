@@ -39,6 +39,7 @@ in {
     ./packages/vscode
     ./packages/xdg
     ./packages/xsession
+    ./packages/zsh
   ];
 
   # Home Manager needs a bit of information about you and the
