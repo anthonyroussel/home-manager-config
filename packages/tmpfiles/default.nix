@@ -2,6 +2,7 @@
 
 {
   systemd.user.tmpfiles.rules = [
-    "e  ${config.home.homeDirectory}/tmp - - - 7d"
+    "d ${config.home.homeDirectory}/tmp - - - mM:7d"
+    "d ${config.home.homeDirectory}/Downloads - - - mM:30d"
   ];
 }
