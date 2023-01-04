@@ -11,7 +11,7 @@
       enable-hot-corners = true;
       gtk-theme = "Adwaita-dark";
       show-battery-percentage = true;
-      text-scaling-factor = 1.20;
+      text-scaling-factor = 1.40;
     };
     "org/gnome/desktop/peripherals/touchpad" = {
       tap-to-click = true;
