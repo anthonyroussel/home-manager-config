@@ -26,7 +26,11 @@
       ];
     };
     sessionVariables = {
+      # Suppress direnv verbose logging
       DIRENV_LOG_FORMAT = "";
+
+      # Suppress AWS profile info on right side of screen
+      SHOW_AWS_PROMPT = "false";
     };
   };
 }
