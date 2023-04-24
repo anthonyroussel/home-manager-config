@@ -39,6 +39,7 @@ in
     ./packages/gpg-agent
     ./packages/nixpkgs-config
     ./packages/opengl
+    ./packages/topgrade
     ./packages/tmpfiles
     ./packages/vim
     ./packages/vscode
