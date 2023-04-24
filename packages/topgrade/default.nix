@@ -4,7 +4,6 @@
     settings = {
       disable = [
         "node"
-        "oh-my-zsh"
       ];
       set_title = false;
       skip_notify = true;
