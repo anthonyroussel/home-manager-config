@@ -5,25 +5,20 @@
     enable = true;
 
     extensions = (with pkgs.vscode-extensions; [
-      octref.vetur
-      dbaeumer.vscode-eslint
-      yzhang.markdown-all-in-one
+      bbenoist.nix
+      bierner.markdown-mermaid
       bungcip.better-toml
+      dbaeumer.vscode-eslint
+      esbenp.prettier-vscode
       github.codespaces
       github.vscode-pull-request-github
-      bbenoist.nix
-      esbenp.prettier-vscode
-      ms-vsliveshare.vsliveshare
       hashicorp.terraform
+      ms-vsliveshare.vsliveshare
+      octref.vetur
       redhat.vscode-yaml
-      bierner.markdown-mermaid
+      wingrunr21.vscode-ruby
+      yzhang.markdown-all-in-one
     ])
-    ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [{
-      name = "vscode-ruby";
-      publisher = "wingrunr21";
-      version = "0.28.0";
-      sha256 = "sha256-H3f1+c31x+lgCzhgTb0uLg9Bdn3pZyJGPPwfpCYrS70=";
-    }]
     ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [{
       name = "ruby-rubocop";
       publisher = "misogi";
