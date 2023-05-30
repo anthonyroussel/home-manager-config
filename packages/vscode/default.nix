@@ -16,6 +16,7 @@
       ms-vsliveshare.vsliveshare
       hashicorp.terraform
       redhat.vscode-yaml
+      bierner.markdown-mermaid
     ])
     ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [{
       name = "vscode-ruby";
