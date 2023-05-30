@@ -53,10 +53,6 @@ in
   home.username = "aroussel";
   home.homeDirectory = "/home/aroussel";
 
-  home.sessionVariables = {
-    EDITOR = "vim";
-  };
-
   # Packages that should be installed to the user profile.
   home.packages = (with pkgs; [
     slack
