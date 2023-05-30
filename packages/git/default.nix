@@ -42,6 +42,11 @@
     };
   };
 
+  programs.gh = {
+    enable = true;
+    enableGitCredentialHelper = true;
+  };
+
   home.packages = (with pkgs; [
     # https://github.com/tj/git-extras
     git-extras

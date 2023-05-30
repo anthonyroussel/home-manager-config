@@ -72,7 +72,6 @@ in
     espeak
     mplayer
     sops
-    gh
     topgrade
     ripgrep
     pup
