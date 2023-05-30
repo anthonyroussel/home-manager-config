@@ -43,6 +43,7 @@ in
     ./packages/opengl
     ./packages/topgrade
     ./packages/tmpfiles
+    ./packages/tmux
     ./packages/vim
     ./packages/vscode
     ./packages/xdg
