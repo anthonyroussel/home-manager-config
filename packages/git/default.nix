@@ -26,9 +26,6 @@
       core = {
         excludesfile = "${config.home.homeDirectory}/.gitignore";
       };
-      credential = {
-        helper = "${pkgs.gitFull}/bin/git-credential-libsecret";
-      };
       init = {
         defaultBranch = "main";
       };
