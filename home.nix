@@ -38,6 +38,7 @@ in
     ./packages/direnv
     ./packages/git
     ./packages/gpg-agent
+    ./packages/jq
     ./packages/nixpkgs-config
     ./packages/opengl
     ./packages/topgrade
