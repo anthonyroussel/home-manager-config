@@ -37,7 +37,7 @@ in
     ./packages/desktop
     ./packages/direnv
     ./packages/git
-    ./packages/gpg-agent
+    ./packages/gpg
     ./packages/jq
     ./packages/nixpkgs-config
     ./packages/opengl
