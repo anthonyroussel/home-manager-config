@@ -1,9 +1,3 @@
-# Duplicate of nixpkgs-config-home.nix to avoid errors during home-manager switch
-#
-# > error: anonymous functioncalled without required argument 'lib'
-#
-{ lib, ... }:
-
 {
   allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     "google-chrome"
