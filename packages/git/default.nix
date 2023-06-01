@@ -32,6 +32,9 @@
       pull = {
         rebase = false;
       };
+      push = {
+        autoSetupRemote = true;
+      };
     };
 
     lfs = {
