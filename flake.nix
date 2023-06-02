@@ -9,21 +9,18 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    devenv = {
-      url = "github:cachix/devenv/latest";
-    };
     nur = {
       url = "github:nix-community/NUR";
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nur, devenv, ... }:
+  outputs = { self, nixpkgs, home-manager, nur, ... }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
     in {
       homeManagerModules.aroussel = {
-        inherit (pkgs devenv);
+        inherit (pkgs);
         imports = [
           nur.hmModules.nur
           ./home.nix

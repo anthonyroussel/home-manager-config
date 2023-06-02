@@ -1,4 +1,4 @@
-{ pkgs, devenv, config, ... }:
+{ pkgs, config, ... }:
 
 let
   aws = with pkgs; [
@@ -73,7 +73,6 @@ in
     gnupg
     config.nur.repos.anthonyroussel.shadow-prod
     nixpkgs-review
-    devenv.packages.x86_64-linux.devenv
   ]) ++ aws ++ browsers ++ databases ++ networking;
 
   # This value determines the Home Manager release that your
