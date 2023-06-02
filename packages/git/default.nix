@@ -8,7 +8,7 @@
     userEmail = "anthony@roussel.dev";
     userName = "Anthony Roussel";
     signing = {
-      key = "D95720261A76CB57C60669F6D8368CAC92C19577";
+      key = "472D368AF107F443F3A5C7129DC4987B1A55E75E";
       signByDefault = true;
     };
 
