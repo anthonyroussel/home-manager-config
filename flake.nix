@@ -17,7 +17,7 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, nur, devenv, ... }:
+  outputs = { self, nixpkgs, home-manager, nur, devenv, ... }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -35,8 +35,6 @@
           nur.hmModules.nur
           self.homeManagerModules.aroussel
           {
-            # Home Manager needs a bit of information about you and the
-            # paths it should manage.
             home.username = "aroussel";
             home.homeDirectory = "/home/aroussel";
           }
