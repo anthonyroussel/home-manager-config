@@ -12,17 +12,23 @@
       enable = true;
       theme = "robbyrussell";
       plugins = [
-        "git"
-        "ruby"
-        "yarn"
-        "node"
-        "direnv"
-        "rails"
-        "vscode"
         "aws"
-        "kubectl"
         "bundler"
+        "common-aliases"
+        "direnv"
+        "emoji"
         "genpass"
+        "git"
+        "git-prompt"
+        "kubectl"
+        "node"
+        "npm"
+        "rails"
+        "ruby"
+        "systemd"
+        "tmux"
+        "vscode"
+        "yarn"
       ];
     };
     sessionVariables = {
