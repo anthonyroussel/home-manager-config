@@ -83,7 +83,7 @@ in
 
     calibre
     starship
-  ]) ++ aws ++ browsers ++ databases ++ networking;
+  ]) ++ aws ++ databases ++ networking;
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
