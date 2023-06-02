@@ -5,7 +5,6 @@ let
     awscli2
     awsebcli
     eksctl
-    nodePackages.aws-cdk
     s3cmd
   ];
 
@@ -49,15 +48,17 @@ in
 
   # Packages that should be installed to the user profile.
   home.packages = (with pkgs; [
+    neovim
+    powerline-fonts
+
+    podman
     slack
     gimp
-    libreoffice
     inkscape
     oath-toolkit
     xclip
     chezmoi
     gopass
-    jq
     zbar
     translate-shell
     sox
@@ -65,14 +66,28 @@ in
     espeak
     mplayer
     sops
+    acpi
     topgrade
     ripgrep
     pup
     mdcat
     yq-go
     gnupg
+    # https://github.com/zellij-org/zellij
+    zellij
+    tig
+    openssh
+    steampipe
+    discord
+    whatsapp-for-linux
+    nixpkgs-fmt
+    nix
+
     config.nur.repos.anthonyroussel.shadow-prod
     nixpkgs-review
+
+    calibre
+    starship
   ]) ++ aws ++ browsers ++ databases ++ networking;
 
   # This value determines the Home Manager release that your
