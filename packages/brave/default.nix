@@ -7,8 +7,4 @@
       { id = "fdjamakpfbbddfjaooikfcpapjohcfmg"; } # Dashlane
     ];
   };
-
-  programs.google-chrome = {
-    enable = true;
-  };
 }

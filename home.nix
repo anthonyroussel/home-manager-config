@@ -8,11 +8,6 @@ let
     s3cmd
   ];
 
-  browsers = with pkgs; [
-    firefox
-    microsoft-edge
-  ];
-
   databases = with pkgs; [
     postgresql
     redis
@@ -28,7 +23,7 @@ let
 in
 {
   imports = [
-    ./packages/chrome
+    ./packages/brave
     ./packages/desktop
     ./packages/direnv
     ./packages/git
