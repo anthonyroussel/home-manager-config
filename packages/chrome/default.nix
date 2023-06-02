@@ -2,7 +2,9 @@
   programs.brave = {
     enable = true;
     extensions = [
-      { id = "cfhdojbkjhnklbpkdaibdccddilifddb"; } # adblock
+      { id = "gighmmpiobklfepjocnamgkkbiglidom"; } # AdBlock — best ad blocker
+      { id = "jpmkfafbacpgapdghgdpembnojdlgkdl"; } # AWS Extend Switch Roles
+      { id = "fdjamakpfbbddfjaooikfcpapjohcfmg"; } # Dashlane
     ];
   };
 
