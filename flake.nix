@@ -22,11 +22,24 @@
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
     in {
+      homeManagerModules.aroussel = {
+        imports = [
+         nur.hmModules.nur
+          ./home.nix
+        ];
+      };
+
       homeConfigurations.aroussel = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
           nur.hmModules.nur
-          ./home.nix
+          self.homeManagerModules.aroussel
+          {
+            # Home Manager needs a bit of information about you and the
+            # paths it should manage.
+            home.username = "aroussel";
+            home.homeDirectory = "/home/aroussel";
+          }
         ];
         extraSpecialArgs = { inherit nur devenv; };
       };

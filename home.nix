@@ -51,11 +51,6 @@ in
     ./packages/zsh
   ];
 
-  # Home Manager needs a bit of information about you and the
-  # paths it should manage.
-  home.username = "aroussel";
-  home.homeDirectory = "/home/aroussel";
-
   # Packages that should be installed to the user profile.
   home.packages = (with pkgs; [
     slack
