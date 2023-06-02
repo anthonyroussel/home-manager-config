@@ -23,8 +23,9 @@
       pkgs = nixpkgs.legacyPackages.${system};
     in {
       homeManagerModules.aroussel = {
+        inherit (pkgs devenv);
         imports = [
-         nur.hmModules.nur
+          nur.hmModules.nur
           ./home.nix
         ];
       };
@@ -32,14 +33,12 @@
       homeConfigurations.aroussel = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
-          nur.hmModules.nur
           self.homeManagerModules.aroussel
           {
             home.username = "aroussel";
             home.homeDirectory = "/home/aroussel";
           }
         ];
-        extraSpecialArgs = { inherit nur devenv; };
       };
     };
 }

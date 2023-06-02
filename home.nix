@@ -1,10 +1,6 @@
-{ config, pkgs, lib, ... }:
+{ pkgs, devenv, config, ... }:
 
 let
-  nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {
-    inherit pkgs;
-  };
-
   aws = with pkgs; [
     awscli2
     awsebcli
@@ -75,7 +71,9 @@ in
     mdcat
     yq-go
     gnupg
-    nur.repos.anthonyroussel.shadow-prod
+    config.nur.repos.anthonyroussel.shadow-prod
+    nixpkgs-review
+    devenv.packages.x86_64-linux.devenv
   ]) ++ aws ++ browsers ++ databases ++ networking;
 
   # This value determines the Home Manager release that your
