@@ -44,7 +44,9 @@
 
   programs.gh = {
     enable = true;
-    enableGitCredentialHelper = true;
+    gitCredentialHelper = {
+      enable = true;
+    };
   };
 
   home.packages = (with pkgs; [
