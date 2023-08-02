@@ -7,7 +7,6 @@
     extensions = (with pkgs.vscode-extensions; [
       bbenoist.nix
       bierner.markdown-mermaid
-      bungcip.better-toml
       dbaeumer.vscode-eslint
       esbenp.prettier-vscode
       github.codespaces
@@ -16,6 +15,7 @@
       ms-vsliveshare.vsliveshare
       octref.vetur
       redhat.vscode-yaml
+      tamasfe.even-better-toml
       wingrunr21.vscode-ruby
       yzhang.markdown-all-in-one
     ])
