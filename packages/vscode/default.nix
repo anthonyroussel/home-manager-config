@@ -12,6 +12,7 @@
       github.codespaces
       github.vscode-pull-request-github
       hashicorp.terraform
+      ms-vscode-remote.remote-containers
       ms-vsliveshare.vsliveshare
       octref.vetur
       redhat.vscode-yaml
