@@ -12,7 +12,6 @@
       github.codespaces
       github.vscode-pull-request-github
       hashicorp.terraform
-      ms-vscode-remote.remote-containers
       ms-vsliveshare.vsliveshare
       octref.vetur
       redhat.vscode-yaml
@@ -20,6 +19,12 @@
       wingrunr21.vscode-ruby
       yzhang.markdown-all-in-one
     ])
+    ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [{
+      name = "remote-containers";
+      publisher = "ms-vscode-remote";
+      version = "0.305.0";
+      sha256 = "b2b4910ffc200db428f4fd6e264f18b5c5cf64eeb691e1b99119e9d53987a8e7";
+    }]
     ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [{
       name = "ruby-rubocop";
       publisher = "misogi";
