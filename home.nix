@@ -6,6 +6,7 @@ let
     awsebcli
     eksctl
     s3cmd
+    awslogs
   ];
 
   databases = with pkgs; [
@@ -54,6 +55,7 @@ in
     xclip
     chezmoi
     gopass
+    httpie
     zbar
     translate-shell
     sox
