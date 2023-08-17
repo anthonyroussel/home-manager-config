@@ -44,6 +44,10 @@ in
     };
   };
 
+  programs.yt-dlp = {
+    enable = true;
+  };
+
   programs.bash = {
     inherit sessionVariables shellAliases;
     enable = true;
