@@ -27,7 +27,6 @@
         inherit (pkgs);
         imports = [
           nur.hmModules.nur
-          ./modules/awscli.nix
           ./home.nix
         ];
       };
