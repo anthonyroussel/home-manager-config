@@ -21,6 +21,10 @@ in
     enable = true;
   };
 
+  programs.less = {
+    enable = true;
+  };
+
   programs.bash = {
     inherit sessionVariables;
     enable = true;
