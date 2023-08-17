@@ -9,6 +9,13 @@ let
     SHOW_AWS_PROMPT = "false";
   };
 
+  shellAliases = {
+    "ll" = "ls -alF";
+    "la" = "ls -A";
+    "ls" = "ls --color=auto";
+    "grep" = "rg";
+  };
+
 in
 {
   programs.dircolors = {
@@ -25,8 +32,12 @@ in
     enable = true;
   };
 
+  programs.ripgrep = {
+    enable = true;
+  };
+
   programs.bash = {
-    inherit sessionVariables;
+    inherit sessionVariables shellAliases;
     enable = true;
     initExtra = ''
       source ${pkgs.nixpkgs-review-checks}/etc/profile.d/nixpkgs-review-checks-hook
@@ -36,16 +47,10 @@ in
       "cd"
       "exit"
     ];
-    shellAliases = {
-      "ll" = "ls -alF";
-      "la" = "ls -A";
-      "ls" = "ls --color=auto";
-      "grep" = "grep --color=auto";
-    };
   };
 
   programs.zsh = {
-    inherit sessionVariables;
+    inherit sessionVariables shellAliases;
     enable = true;
     history = {
       ignorePatterns = [

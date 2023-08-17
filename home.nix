@@ -63,7 +63,6 @@ in
     sops
     acpi
     topgrade
-    ripgrep
     pup
     mdcat
     yq-go
