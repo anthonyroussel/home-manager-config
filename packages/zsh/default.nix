@@ -36,6 +36,14 @@ in
     enable = true;
   };
 
+  programs.translate-shell = {
+    enable = true;
+    settings = {
+      hl = "fr";
+      tl = "en";
+    };
+  };
+
   programs.bash = {
     inherit sessionVariables shellAliases;
     enable = true;

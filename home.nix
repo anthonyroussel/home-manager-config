@@ -57,7 +57,6 @@ in
     gopass
     httpie
     zbar
-    translate-shell
     sox
     mpv
     espeak
