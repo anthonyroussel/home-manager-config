@@ -1,6 +1,25 @@
 { pkgs, ... }:
 
 {
+  programs.dircolors = {
+    enable = true;
+    enableBashIntegration = true;
+    enableZshIntegration = true;
+  };
+
+  programs.bash = {
+    enable = true;
+    bashrcExtra = ''
+      source ${pkgs.nixpkgs-review-checks}/etc/profile.d/nixpkgs-review-checks-hook
+    '';
+    shellAliases = {
+      "ll" = "ls -alF";
+      "la" = "ls -A";
+      "ls" = "ls --color=auto";
+      "grep" = "grep --color=auto";
+    };
+  };
+
   programs.zsh = {
     enable = true;
     history = {
