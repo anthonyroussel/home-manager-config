@@ -43,6 +43,7 @@ in
 
   # Packages that should be installed to the user profile.
   home.packages = (with pkgs; [
+    p7zip
     neovim
     powerline-fonts
 
