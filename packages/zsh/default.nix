@@ -1,5 +1,15 @@
 { pkgs, ... }:
 
+let
+  sessionVariables = {
+    # Suppress direnv verbose logging
+    DIRENV_LOG_FORMAT = "";
+
+    # Suppress AWS profile info on right side of screen
+    SHOW_AWS_PROMPT = "false";
+  };
+
+in
 {
   programs.dircolors = {
     enable = true;
@@ -8,10 +18,16 @@
   };
 
   programs.bash = {
+    inherit sessionVariables;
     enable = true;
-    bashrcExtra = ''
+    initExtra = ''
       source ${pkgs.nixpkgs-review-checks}/etc/profile.d/nixpkgs-review-checks-hook
     '';
+    historyIgnore = [
+      "ls"
+      "cd"
+      "exit"
+    ];
     shellAliases = {
       "ll" = "ls -alF";
       "la" = "ls -A";
@@ -21,6 +37,7 @@
   };
 
   programs.zsh = {
+    inherit sessionVariables;
     enable = true;
     history = {
       ignorePatterns = [
@@ -49,13 +66,6 @@
         "vscode"
         "yarn"
       ];
-    };
-    sessionVariables = {
-      # Suppress direnv verbose logging
-      DIRENV_LOG_FORMAT = "";
-
-      # Suppress AWS profile info on right side of screen
-      SHOW_AWS_PROMPT = "false";
     };
   };
 }
