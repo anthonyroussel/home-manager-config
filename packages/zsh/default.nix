@@ -45,7 +45,10 @@ in
     enable = true;
     history = {
       ignorePatterns = [
-        "prod"
+        "*prod*"
+        "ls *"
+        "cd *"
+        "exit"
       ];
     };
     oh-my-zsh = {
