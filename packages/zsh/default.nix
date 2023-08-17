@@ -17,6 +17,10 @@ in
     enableZshIntegration = true;
   };
 
+  programs.htop = {
+    enable = true;
+  };
+
   programs.bash = {
     inherit sessionVariables;
     enable = true;
