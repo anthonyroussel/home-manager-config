@@ -36,9 +36,10 @@ in
     enable = true;
   };
 
-  programs.ripgrep = {
-    enable = true;
-  };
+  home.packages = with pkgs; [ ripgrep ];
+  # programs.ripgrep = {
+  #   enable = true;
+  # };
 
   programs.translate-shell = {
     enable = true;
