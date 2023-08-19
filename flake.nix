@@ -31,6 +31,8 @@
       ];
 
     in {
+      inherit overlays;
+
       homeManagerModules.aroussel = {
         inherit (pkgs);
         imports = [
