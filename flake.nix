@@ -22,6 +22,14 @@
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
+      overlays = [
+        (
+          final: prev: {
+            nixpkgs-review-checks = inputs.nixpkgs-review-checks.packages."${system}".nixpkgs-review-checks;
+          }
+        )
+      ];
+
     in {
       homeManagerModules.aroussel = {
         inherit (pkgs);
@@ -29,6 +37,7 @@
           nur.hmModules.nur
           ./home.nix
         ];
+        nixpkgs.overlays = overlays;
       };
 
       homeConfigurations.aroussel = home-manager.lib.homeManagerConfiguration {
@@ -37,13 +46,7 @@
         modules = [
           self.homeManagerModules.aroussel
           {
-            nixpkgs.overlays = [
-              (
-                final: prev: {
-                  nixpkgs-review-checks = inputs.nixpkgs-review-checks.packages."${system}".nixpkgs-review-checks;
-                }
-              )
-            ];
+            nixpkgs.overlays = overlays;
             home.username = "aroussel";
             home.homeDirectory = "/home/aroussel";
           }
