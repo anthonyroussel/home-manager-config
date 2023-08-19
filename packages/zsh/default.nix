@@ -32,6 +32,10 @@ in
     enable = true;
   };
 
+  programs.nix-index = {
+    enable = true;
+  };
+
   programs.ripgrep = {
     enable = true;
   };
