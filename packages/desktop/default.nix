@@ -50,6 +50,9 @@
     "org/gnome/shell/extensions/openweather" = {
       city = "48.8588897,2.3200410217200766>Paris, Île-de-France, France métropolitaine, France >0";
     };
+    "org/gnome/GWeather4" = {
+      temperature-unit = "centigrade";
+    };
   };
   fonts.fontconfig.enable = true;
 
