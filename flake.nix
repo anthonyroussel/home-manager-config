@@ -16,6 +16,10 @@
     nur = {
       url = "github:nix-community/NUR";
     };
+    devenv = {
+      url = "github:cachix/devenv?ref=v0.6.3";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ { self, nixpkgs, home-manager, nur, ... }:
@@ -25,6 +29,7 @@
       overlays = [
         (
           final: prev: {
+            devenv = inputs.devenv.packages."${system}".devenv;
             nixpkgs-review-checks = inputs.nixpkgs-review-checks.packages."${system}".nixpkgs-review-checks;
           }
         )

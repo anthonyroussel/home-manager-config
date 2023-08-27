@@ -81,6 +81,7 @@ in
     config.nur.repos.anthonyroussel.shadow-prod
     nixpkgs-review
     nixpkgs-review-checks
+    devenv
 
     calibre
     starship
