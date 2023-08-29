@@ -32,6 +32,7 @@ in
     ./packages/jq
     ./packages/nixpkgs-config
     ./packages/opengl
+    ./packages/stylix
     ./packages/topgrade
     ./packages/tmpfiles
     ./packages/tmux

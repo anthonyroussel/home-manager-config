@@ -5,13 +5,10 @@
       show-weekdate = true;
     };
     "org/gnome/desktop/interface" = {
-      color-scheme = "prefer-dark";
       clock-show-seconds = true;
       clock-show-weekday = true;
       enable-hot-corners = true;
-      gtk-theme = "Adwaita-dark";
       show-battery-percentage = true;
-      text-scaling-factor = 1.20;
     };
     "org/gnome/desktop/peripherals/touchpad" = {
       tap-to-click = true;

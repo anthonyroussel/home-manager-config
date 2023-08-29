@@ -20,9 +20,12 @@
       url = "github:cachix/devenv?ref=v0.6.3";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    stylix = {
+      url = "github:danth/stylix";
+    };
   };
 
-  outputs = inputs @ { self, nixpkgs, home-manager, nur, ... }:
+  outputs = inputs @ { self, nixpkgs, home-manager, nur, stylix, ... }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -42,6 +45,7 @@
         inherit (pkgs);
         imports = [
           nur.hmModules.nur
+          stylix.homeManagerModules.stylix
           ./home.nix
         ];
         nixpkgs.overlays = overlays;
