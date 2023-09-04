@@ -21,9 +21,10 @@
       enable = true;
       defaultApplications = config.lib.xdg.mimeAssociations [
         pkgs.brave
-        pkgs.inkscape
         pkgs.gimp
+        pkgs.inkscape
         pkgs.slack
+        pkgs.vscode
       ];
     };
   };
