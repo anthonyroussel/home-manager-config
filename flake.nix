@@ -15,6 +15,7 @@
     };
     nur = {
       url = "github:anthonyroussel/nur-packages";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     devenv = {
       url = "github:cachix/devenv?ref=v0.6.3";
@@ -22,6 +23,7 @@
     };
     stylix = {
       url = "github:danth/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
