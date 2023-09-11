@@ -45,47 +45,49 @@ in
 
   # Packages that should be installed to the user profile.
   home.packages = (with pkgs; [
-    p7zip
-    powerline-fonts
-
-    podman
-    slack
-    gimp
-    inkscape
-    oath-toolkit
-    xclip
-    chezmoi
-    gopass
-    httpie
-    zbar
-    sox
-    mpv
-    espeak
-    mplayer
-    sops
     acpi
-    topgrade
-    pup
-    mdcat
-    yq-go
-    gnupg
-    # https://github.com/zellij-org/zellij
-    zellij
-    tig
-    openssh
-    steampipe
+    calibre
+    chezmoi
+    devenv
     discord
-    whatsapp-for-linux
-    nixpkgs-fmt
+    espeak
+    file
+    gimp
+    gnupg
+    gopass
+    homebank
+    httpie
+    imagemagick
+    inkscape
+    killall
+    mdcat
+    mplayer
+    mpv
     nix
-
-    config.nur.repos.anthonyroussel.shadow-prod
+    nixpkgs-fmt
     nixpkgs-review
     nixpkgs-review-checks
-    devenv
-
-    calibre
+    nvtop-intel
+    oath-toolkit
+    openssh
+    p7zip
+    podman
+    powerline-fonts
+    pup
+    shadow-prod
+    slack
+    sops
+    sox
     starship
+    steampipe
+    tig
+    topgrade
+    unzip
+    whatsapp-for-linux
+    xclip
+    yq-go
+    zbar
+    zellij
   ]) ++ aws ++ databases ++ networking;
 
   # This value determines the Home Manager release that your
