@@ -2,17 +2,18 @@
 
 {
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-    "google-chrome"
-    "slack"
     "android-studio-stable"
-    "vscode"
-    "spotify"
-    "spotify-unwrapped"
-    "microsoft-edge-stable"
     "discord"
+    "google-chrome"
+    "microsoft-edge-stable"
     "shadow-prod"
+    "slack"
+    "spotify-unwrapped"
+    "spotify"
     "vscode-extension-github-codespaces"
+    "vscode-extension-ms-vscode-remote-remote-containers"
     "vscode-extension-ms-vsliveshare-vsliveshare"
+    "vscode"
   ];
   xdg.configFile."nixpkgs/config.nix".source = ./nixpkgs-config.nix;
 }
