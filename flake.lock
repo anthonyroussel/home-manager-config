@@ -297,6 +297,22 @@
     },
     "nixpkgs_2": {
       "locked": {
+        "lastModified": 1693654884,
+        "narHash": "sha256-EqKKEl+IOS8TSjkt+xn1qGpsjnx5/ag33YNQ1+c7OuM=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "e7f35e03abd06a2faef6684d0de813370e13bda8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_3": {
+      "locked": {
         "lastModified": 1691853136,
         "narHash": "sha256-wTzDsRV4HN8A2Sl0SVQY0q8ILs90CD43Ha//7gNZE+E=",
         "owner": "NixOS",
@@ -312,17 +328,20 @@
       }
     },
     "nur": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
+      },
       "locked": {
-        "lastModified": 1694409543,
-        "narHash": "sha256-ZtaPq63orFqt9OCs2SQGhdUlO6y1hbxOxlffYSERXkk=",
-        "owner": "nix-community",
-        "repo": "NUR",
-        "rev": "6444f8dc4fa8f0bce87e0cbdb1a4fc30a2d7dfcb",
+        "lastModified": 1694442051,
+        "narHash": "sha256-3OIzRnwUXGINsBi0TRBJtkPzadEtDwerTQnf9z3m38I=",
+        "owner": "anthonyroussel",
+        "repo": "nur-packages",
+        "rev": "27947edfd1b0aa43acde5f9729910f6cecc81094",
         "type": "github"
       },
       "original": {
-        "owner": "nix-community",
-        "repo": "NUR",
+        "owner": "anthonyroussel",
+        "repo": "nur-packages",
         "type": "github"
       }
     },
@@ -369,7 +388,7 @@
         "base16": "base16",
         "flake-compat": "flake-compat_2",
         "home-manager": "home-manager_2",
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs_3"
       },
       "locked": {
         "lastModified": 1694375893,

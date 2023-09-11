@@ -14,7 +14,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nur = {
-      url = "github:nix-community/NUR";
+      url = "github:anthonyroussel/nur-packages";
     };
     devenv = {
       url = "github:cachix/devenv?ref=v0.6.3";
@@ -34,6 +34,7 @@
           final: prev: {
             devenv = inputs.devenv.packages."${system}".devenv;
             nixpkgs-review-checks = inputs.nixpkgs-review-checks.packages."${system}".nixpkgs-review-checks;
+            shadow-prod = nur.packages."${system}".shadow-prod;
           }
         )
       ];
@@ -44,7 +45,7 @@
       homeManagerModules.aroussel = {
         inherit (pkgs);
         imports = [
-          nur.hmModules.nur
+          nur.hmModules.awscli
           stylix.homeManagerModules.stylix
           ./home.nix
         ];

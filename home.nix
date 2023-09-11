@@ -2,7 +2,6 @@
 
 let
   aws = with pkgs; [
-    awscli2
     awsebcli
     eksctl
     s3cmd
@@ -24,6 +23,7 @@ let
 in
 {
   imports = [
+    ./packages/awscli
     ./packages/brave
     ./packages/desktop
     ./packages/direnv
