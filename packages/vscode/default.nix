@@ -15,6 +15,7 @@
       ms-vscode-remote.remote-containers
       ms-vsliveshare.vsliveshare
       octref.vetur
+      golang.go
       redhat.vscode-yaml
       tamasfe.even-better-toml
       wingrunr21.vscode-ruby
