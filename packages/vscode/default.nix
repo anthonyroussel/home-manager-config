@@ -1,33 +1,30 @@
 { lib, pkgs, ... }:
 
+let
+  extensions = with pkgs.vscode-marketplace; [
+    bbenoist.nix
+    bierner.markdown-mermaid
+    dbaeumer.vscode-eslint
+    esbenp.prettier-vscode
+    github.codespaces
+    github.vscode-pull-request-github
+    golang.go
+    hashicorp.terraform
+    ms-vscode-remote.remote-containers
+    ms-vsliveshare.vsliveshare
+    octref.vetur
+    redhat.vscode-yaml
+    tamasfe.even-better-toml
+    wingrunr21.vscode-ruby
+    yzhang.markdown-all-in-one
+  ];
+
+in
 {
   programs.vscode = {
+    inherit extensions;
+
     enable = true;
-
-    extensions = (with pkgs.vscode-extensions; [
-      bbenoist.nix
-      bierner.markdown-mermaid
-      dbaeumer.vscode-eslint
-      esbenp.prettier-vscode
-      github.codespaces
-      github.vscode-pull-request-github
-      hashicorp.terraform
-      ms-vscode-remote.remote-containers
-      ms-vsliveshare.vsliveshare
-      octref.vetur
-      golang.go
-      redhat.vscode-yaml
-      tamasfe.even-better-toml
-      wingrunr21.vscode-ruby
-      yzhang.markdown-all-in-one
-    ])
-    ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [{
-      name = "ruby-rubocop";
-      publisher = "misogi";
-      version = "0.8.6";
-      sha256 = "ea1809cce7ab1820977290039c849aedec109d158b027ea4e8ae242c9474f542";
-    }];
-
     userSettings = {
       "editor.insertSpaces" = true;
       "editor.tabSize" = 2;

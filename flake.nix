@@ -25,6 +25,9 @@
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-vscode-extensions = {
+      url = "github:nix-community/nix-vscode-extensions";
+    };
   };
 
   outputs = inputs @ { self, nixpkgs, home-manager, nur, stylix, ... }:
@@ -39,6 +42,7 @@
             shadow-prod = nur.packages."${system}".shadow-prod;
           }
         )
+        inputs.nix-vscode-extensions.overlays.default
       ];
 
     in {
