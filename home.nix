@@ -46,6 +46,7 @@ in
   # Packages that should be installed to the user profile.
   home.packages = (with pkgs; [
     acpi
+    borgbackup
     calibre
     chezmoi
     devenv
@@ -55,6 +56,7 @@ in
     gimp
     gnupg
     gopass
+    goss
     homebank
     httpie
     imagemagick
@@ -64,6 +66,7 @@ in
     mplayer
     mpv
     nix
+    nixfmt
     nixpkgs-fmt
     nixpkgs-review
     nixpkgs-review-checks
@@ -74,11 +77,11 @@ in
     podman
     powerline-fonts
     pup
-    shadow-prod
-    slack
+    rclone
     sops
     sox
     starship
+    steamguard-cli
     steampipe
     tig
     topgrade
