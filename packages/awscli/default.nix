@@ -20,6 +20,10 @@
         region = "eu-west-3";
         output = "json";
       };
+      "profile rsl-main-poweruser" = {
+        source_profile = "rsl-main";
+        role_arn = "arn:aws:iam::085148030565:role/rsl-poweruser";
+      };
       "profile rsl-udemy" = {
         sso_session = "rsl";
         sso_account_id = "894251631406";
