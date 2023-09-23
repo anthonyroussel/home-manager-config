@@ -23,7 +23,6 @@
         pkgs.brave
         pkgs.gimp
         pkgs.inkscape
-        pkgs.slack
         pkgs.vscode
       ];
     };
