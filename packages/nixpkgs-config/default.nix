@@ -7,7 +7,6 @@
     "google-chrome"
     "microsoft-edge-stable"
     "shadow-prod"
-    "slack"
     "spotify-unwrapped"
     "spotify"
     "vscode-extension-github-codespaces"
