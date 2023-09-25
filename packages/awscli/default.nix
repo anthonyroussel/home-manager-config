@@ -24,6 +24,10 @@
         source_profile = "rsl-main";
         role_arn = "arn:aws:iam::085148030565:role/rsl-poweruser";
       };
+      "profile rsl-cloud-poweruser" = {
+        source_profile = "rsl-cloud";
+        role_arn = "arn:aws:iam::726498208420:role/rsl-poweruser";
+      };
       "profile rsl-udemy" = {
         sso_session = "rsl";
         sso_account_id = "894251631406";
@@ -31,6 +35,14 @@
         region = "eu-west-3";
         output = "json";
       };
+      "profile rsl-cloud" = {
+        sso_session = "rsl";
+        sso_account_id = "726498208420";
+        sso_role_name = "admin";
+        region = "eu-west-3";
+        output = "json";
+      };
+
     };
   };
 }
