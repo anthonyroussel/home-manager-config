@@ -24,6 +24,10 @@
         source_profile = "rsl-main";
         role_arn = "arn:aws:iam::085148030565:role/rsl-poweruser";
       };
+      "profile rsl-udemy-poweruser" = {
+        source_profile = "rsl-udemy";
+        role_arn = "arn:aws:iam::894251631406:role/rsl-poweruser";
+      };
       "profile rsl-cloud-poweruser" = {
         source_profile = "rsl-cloud";
         role_arn = "arn:aws:iam::726498208420:role/rsl-poweruser";
