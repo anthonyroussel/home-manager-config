@@ -51,7 +51,6 @@
       homeManagerModules.aroussel = {
         inherit (pkgs);
         imports = [
-          nur.hmModules.awscli
           stylix.homeManagerModules.stylix
           ./home.nix
         ];
