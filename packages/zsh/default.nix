@@ -93,7 +93,6 @@ in
         "node"
         "npm"
         "rails"
-        "ruby"
         "systemd"
         "tmux"
         "vscode"

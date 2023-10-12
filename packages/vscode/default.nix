@@ -15,7 +15,6 @@ let
     octref.vetur
     redhat.vscode-yaml
     tamasfe.even-better-toml
-    wingrunr21.vscode-ruby
     yzhang.markdown-all-in-one
   ];
 
@@ -31,11 +30,6 @@ in
       "files.insertFinalNewline" = true;
       "files.trimFinalNewlines" = true;
       "files.trimTrailingWhitespace" = true;
-      "ruby.format" = "rubocop";
-      "ruby.intellisense" = "rubyLocate";
-      "ruby.useLanguageServer" = true;
-      "ruby.useBundler" = true;
-      "ruby.rubocop.useBundler" = true;
       "[javascript]" = {
         "editor.defaultFormatter" = "esbenp.prettier-vscode";
       };
@@ -47,9 +41,6 @@ in
       };
       "[markdown]" = {
         "editor.defaultFormatter" = "yzhang.markdown-all-in-one";
-      };
-      "[ruby]" = {
-        "editor.defaultFormatter" = "rebornix.ruby";
       };
       "[typescript]" = {
         "editor.defaultFormatter" = "esbenp.prettier-vscode";
