@@ -46,7 +46,15 @@
         region = "eu-west-3";
         output = "json";
       };
-
+      "profile fml" = {
+        region = "eu-central-1";
+        output = "json";
+      };
+    };
+    credentials = {
+      "fml" = {
+        credential_process = "${pkgs.gopass}/bin/gopass show --nosync -u -n aws/fml.json";
+      };
     };
   };
 }
