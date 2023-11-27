@@ -20,7 +20,7 @@
     mimeApps = {
       enable = true;
       defaultApplications = config.lib.xdg.mimeAssociations [
-        pkgs.brave
+        pkgs.firefox
         pkgs.gimp
         pkgs.inkscape
         pkgs.vscode
