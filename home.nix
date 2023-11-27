@@ -3,6 +3,7 @@
 let
   aws = with pkgs; [
     awsebcli
+    aws-sso-cli
     eksctl
     s3cmd
     awslogs
@@ -46,10 +47,10 @@ in
   # Packages that should be installed to the user profile.
   home.packages = (with pkgs; [
     acpi
+    bintools
     borgbackup
     calibre
     chezmoi
-    devenv
     discord
     espeak
     file
@@ -61,31 +62,47 @@ in
     httpie
     imagemagick
     inkscape
+    jetbrains.ruby-mine
+    jetbrains.webstorm
     killall
     mdcat
     mplayer
     mpv
     nix
+    nix-health
     nixfmt
     nixpkgs-fmt
-    nixpkgs-review
+    nixpkgs-hammering
+    (nixpkgs-review.override {
+      withSandboxSupport = true;
+      withNom = true;
+    })
     nixpkgs-review-checks
-    nvtop-intel
+    nvtop
     oath-toolkit
     openssh
     p7zip
+    pcsx2
     podman
     powerline-fonts
+    protonvpn-cli
+    protonvpn-gui
     pup
     rclone
+    shadow-prod
     sops
     sox
     starship
+    steam-tui
     steamguard-cli
     steampipe
     tig
+    tomb
     topgrade
+    transmission-qt
+    tree
     unzip
+    upscayl
     whatsapp-for-linux
     xclip
     yq-go
