@@ -44,13 +44,7 @@
 
   programs.gh = {
     enable = true;
-
-    # Comment this below once upgraded to NixOS 23.11
-    enableGitCredentialHelper = true;
-    #
-    # gitCredentialHelper = {
-    #   enable = true;
-    # };
+    gitCredentialHelper.enable = true;
   };
 
   home.packages = (with pkgs; [

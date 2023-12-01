@@ -36,10 +36,13 @@ in
     enable = true;
   };
 
-  home.packages = with pkgs; [ ripgrep ];
-  # programs.ripgrep = {
+  # programs.nix-index = {
   #   enable = true;
   # };
+
+  programs.ripgrep = {
+    enable = true;
+  };
 
   programs.translate-shell = {
     enable = true;
