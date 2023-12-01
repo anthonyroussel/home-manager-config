@@ -33,6 +33,7 @@ in
     ./packages/jq
     ./packages/nixpkgs-config
     ./packages/opengl
+    ./packages/sops
     ./packages/stylix
     ./packages/topgrade
     ./packages/tmpfiles
