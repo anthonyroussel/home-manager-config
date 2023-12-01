@@ -21,17 +21,9 @@
       url = "github:cachix/devenv";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    sops-nix = {
-      url = "github:Mic92/sops-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     stylix = {
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-    nix-secrets = {
-      url = "github:anthonyroussel/nix-secrets";
-      flake = false;
     };
     nix-vscode-extensions = {
       url = "github:nix-community/nix-vscode-extensions";
@@ -39,7 +31,7 @@
     };
   };
 
-  outputs = inputs @ { self, nixpkgs, home-manager, nix-secrets, nur, sops-nix, stylix, ... }:
+  outputs = inputs @ { self, nixpkgs, home-manager, nur, stylix, ... }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -60,7 +52,6 @@
       homeManagerModules.aroussel = {
         inherit (pkgs);
         imports = [
-          sops-nix.homeManagerModule
           stylix.homeManagerModules.stylix
           ./home.nix
         ];
@@ -78,8 +69,6 @@
             home.homeDirectory = "/home/aroussel";
           }
         ];
-
-        extraSpecialArgs = { inherit nix-secrets; };
       };
     };
 }
