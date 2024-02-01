@@ -27,7 +27,7 @@
         excludesfile = "${config.home.homeDirectory}/.gitignore";
       };
       init = {
-        defaultBranch = "main";
+        defaultBranch = "master";
       };
       pull = {
         rebase = false;
