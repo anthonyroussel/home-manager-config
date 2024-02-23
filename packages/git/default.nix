@@ -29,6 +29,9 @@
       init = {
         defaultBranch = "master";
       };
+      merge = {
+        conflictStyle = "zdiff3";
+      };
       pull = {
         rebase = false;
       };
