@@ -46,8 +46,16 @@
         region = "eu-west-3";
         output = "json";
       };
-      "profile fml" = {
-        region = "eu-central-1";
+      "sso-session fml" = {
+        sso_start_url = "https://lafourmiliere.awsapps.com/start/";
+        sso_region = "eu-west-3";
+        sso_registration_scopes = "sso:account:access";
+      };
+      "profile fml-root" = {
+        sso_session = "fml";
+        sso_account_id = "881224422599";
+        sso_role_name = "developers";
+        region = "eu-west-3";
         output = "json";
       };
     };
