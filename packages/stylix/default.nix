@@ -9,8 +9,8 @@
     base16Scheme = "${pkgs.base16-schemes}/share/themes/solarflare.yaml";
 
     image = pkgs.fetchurl {
-      url = "https://cdnb.artstation.com/p/assets/images/images/016/252/301/4k/grady-frederick-atlantis-garbageman-v2.jpg";
-      hash = "sha256-J4CCXMV698POytE0HAxjOlBW7mO+uSr+Fqy585G/LF8=";
+      url = "https://raw.githubusercontent.com/NixOS/nixos-artwork/master/wallpapers/NixOS-Gradient-grey.png";
+      hash = "sha256-Tf4Xruf608hpl7YwL4Mq9l9egBOCN+W4KFKnqrgosLE=";
     };
 
     polarity = "dark";
