@@ -10,7 +10,7 @@ let
   ];
 
   databases = with pkgs; [
-    postgresql
+    postgresql_16
     redis
     usql
   ];
@@ -46,30 +46,40 @@ in
     ./packages/zsh
   ];
 
+  nix.package = pkgs.nix;
+
   # Packages that should be installed to the user profile.
   home.packages = (with pkgs; [
     acpi
+    anki
     bintools
     borgbackup
+    bruno
     calibre
     chezmoi
     discord
+    dislocker
     espeak
     file
+    filezilla
+    ffmpeg-full
     gimp
-    gnupg
     gopass
     goss
     homebank
     httpie
+    hydra-check
     imagemagick
     inkscape
     jetbrains.ruby-mine
     jetbrains.webstorm
     killall
+    libsForQt5.gwenview
+    libwebp
     mdcat
     mplayer
     mpv
+    mupdf
     nix
     nix-health
     nixfmt
@@ -92,6 +102,7 @@ in
     pup
     rclone
     shadow-prod
+    simplescreenrecorder
     sops
     sox
     starship
