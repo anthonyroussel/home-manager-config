@@ -48,7 +48,21 @@
   programs.gh = {
     enable = true;
     gitCredentialHelper.enable = true;
+    settings = {
+      aliases = {
+        co = "pr checkout";
+        pv = "pr view";
+      };
+    };
   };
+
+  home.file.".config/gh/hosts.yml".text = ''
+    github.com:
+      user: anthonyroussel
+      git_protocol: https
+      users:
+        anthonyroussel: {}
+  '';
 
   home.packages = (with pkgs; [
     # https://github.com/tj/git-extras
