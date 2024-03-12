@@ -23,6 +23,9 @@
         pkgs.firefox
         pkgs.gimp
         pkgs.inkscape
+        pkgs.thunderbird
+        pkgs.transmission-qt
+        pkgs.vlc
         pkgs.vscode
       ];
     };
