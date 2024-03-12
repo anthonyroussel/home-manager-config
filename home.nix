@@ -39,6 +39,7 @@ in
     ./packages/topgrade
     ./packages/tmpfiles
     ./packages/tmux
+    ./packages/thunderbird
     ./packages/vim
     ./packages/vscode
     ./packages/xdg
