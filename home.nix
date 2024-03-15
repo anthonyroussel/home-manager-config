@@ -28,6 +28,7 @@ in
     ./packages/brave
     ./packages/desktop
     ./packages/direnv
+    ./packages/firefox
     ./packages/git
     ./packages/gpg
     ./packages/jq
@@ -124,7 +125,6 @@ in
     zellij
   ]) ++ aws ++ databases ++ networking;
 
-  programs.firefox.enable = true;
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
