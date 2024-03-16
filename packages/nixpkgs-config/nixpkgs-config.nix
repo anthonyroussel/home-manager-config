@@ -1,3 +1,1 @@
-{
-  permittedInsecurePackages = [];
-}
+{ permittedInsecurePackages = [ ]; }

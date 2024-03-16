@@ -35,23 +35,32 @@
     };
   };
 
-  outputs = inputs @ { self, nixpkgs, home-manager, nix-secrets, nur, sops-nix, stylix, ... }:
+  outputs =
+    inputs@{
+      self,
+      nixpkgs,
+      home-manager,
+      nix-secrets,
+      nur,
+      sops-nix,
+      stylix,
+      ...
+    }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
       overlays = [
-        (
-          final: prev: {
-            devenv = inputs.devenv.packages."${system}".devenv;
-            nixpkgs-review-checks = inputs.nixpkgs-review-checks.packages."${system}".nixpkgs-review-checks;
-            shadow-prod = nur.packages."${system}".shadow-prod;
-          }
-        )
+        (final: prev: {
+          devenv = inputs.devenv.packages."${system}".devenv;
+          nixpkgs-review-checks = inputs.nixpkgs-review-checks.packages."${system}".nixpkgs-review-checks;
+          shadow-prod = inputs.nur.packages."${system}".shadow-prod;
+        })
         inputs.nix-vscode-extensions.overlays.default
       ];
-
-    in {
-      inherit overlays;
+      nixosModules = import ./modules;
+    in
+    {
+      inherit overlays nixosModules;
 
       homeManagerModules.aroussel = {
         inherit (pkgs);
@@ -75,7 +84,9 @@
           }
         ];
 
-        extraSpecialArgs = { inherit nix-secrets; };
+        extraSpecialArgs = {
+          inherit nix-secrets;
+        };
       };
     };
 }

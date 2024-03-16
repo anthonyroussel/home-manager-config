@@ -2,9 +2,7 @@
   programs.topgrade = {
     enable = true;
     settings = {
-      disable = [
-        "node"
-      ];
+      disable = [ "node" ];
       set_title = false;
       skip_notify = true;
       cleanup = true;
@@ -12,9 +10,7 @@
         "Run garbage collection on Nix store" = "nix-collect-garbage";
       };
       git = {
-        repos = [
-          "~/src/*/"
-        ];
+        repos = [ "~/src/*/" ];
       };
     };
   };

@@ -3,9 +3,7 @@
 {
   programs.vim = {
     enable = true;
-    plugins = with pkgs; [
-      vimPlugins.LazyVim
-    ];
+    plugins = with pkgs; [ vimPlugins.LazyVim ];
     settings = {
       expandtab = true;
       tabstop = 2;

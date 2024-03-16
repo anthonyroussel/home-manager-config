@@ -64,9 +64,12 @@
         anthonyroussel: {}
   '';
 
-  home.packages = (with pkgs; [
-    # https://github.com/tj/git-extras
-    git-extras
-    gitflow
-  ]);
+  home.packages = (
+    with pkgs;
+    [
+      # https://github.com/tj/git-extras
+      git-extras
+      gitflow
+    ]
+  );
 }

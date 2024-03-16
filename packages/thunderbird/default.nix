@@ -5,7 +5,7 @@
       default = {
         isDefault = true;
       };
-      fourmiliere = {};
+      fourmiliere = { };
     };
   };
 }

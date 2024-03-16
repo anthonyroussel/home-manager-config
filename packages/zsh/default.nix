@@ -15,7 +15,6 @@ let
     "ls" = "ls --color=auto";
     "grep" = "rg";
   };
-
 in
 {
   programs.dircolors = {

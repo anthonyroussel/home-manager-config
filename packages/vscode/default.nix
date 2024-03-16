@@ -17,7 +17,6 @@ let
     tamasfe.even-better-toml
     yzhang.markdown-all-in-one
   ];
-
 in
 {
   programs.vscode = {

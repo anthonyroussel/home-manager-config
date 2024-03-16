@@ -1,8 +1,9 @@
-{ pkgs
-, config
-, home
-, nix-secrets
-, ...
+{
+  pkgs,
+  config,
+  home,
+  nix-secrets,
+  ...
 }:
 
 {
