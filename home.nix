@@ -31,6 +31,7 @@ in
     ./packages/git
     ./packages/gpg
     ./packages/jq
+    ./packages/nix
     ./packages/nixpkgs-config
     ./packages/opengl
     ./packages/openstack
@@ -47,8 +48,6 @@ in
     ./packages/xsession
     ./packages/zsh
   ];
-
-  nix.package = pkgs.nix;
 
   # Packages that should be installed to the user profile.
   home.packages = (with pkgs; [

@@ -7,7 +7,7 @@
   };
 
   nix = {
-    package = pkgs.nix;
+    package = pkgs.nixVersions.nix_2_21;
     settings = {
       sandbox = true;
       experimental-features = [
