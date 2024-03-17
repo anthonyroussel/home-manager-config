@@ -35,6 +35,7 @@ in
     ./packages/opengl
     ./packages/openstack
     ./packages/sops
+    ./packages/ssh
     ./packages/stylix
     ./packages/topgrade
     ./packages/tmpfiles
