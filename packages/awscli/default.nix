@@ -20,18 +20,6 @@
         region = "eu-west-3";
         output = "json";
       };
-      "profile rsl-main-poweruser" = {
-        source_profile = "rsl-main";
-        role_arn = "arn:aws:iam::085148030565:role/rsl-poweruser";
-      };
-      "profile rsl-udemy-poweruser" = {
-        source_profile = "rsl-udemy";
-        role_arn = "arn:aws:iam::894251631406:role/rsl-poweruser";
-      };
-      "profile rsl-cloud-poweruser" = {
-        source_profile = "rsl-cloud";
-        role_arn = "arn:aws:iam::726498208420:role/rsl-poweruser";
-      };
       "profile rsl-udemy" = {
         sso_session = "rsl";
         sso_account_id = "894251631406";
@@ -57,11 +45,6 @@
         sso_role_name = "developers";
         region = "eu-west-3";
         output = "json";
-      };
-    };
-    credentials = {
-      "fml" = {
-        credential_process = "${pkgs.gopass}/bin/gopass show --nosync -u -n aws/fml.json";
       };
     };
   };
