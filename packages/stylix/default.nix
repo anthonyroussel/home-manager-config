@@ -5,6 +5,14 @@
     enable = true;
   };
 
+  gtk = {
+    enable = true;
+    iconTheme = {
+      name = "Zafiro-icons-Dark";
+      package = pkgs.zafiro-icons;
+    };
+  };
+
   stylix = {
     base16Scheme = "${pkgs.base16-schemes}/share/themes/solarflare.yaml";
 
@@ -16,10 +24,10 @@
     polarity = "dark";
 
     opacity = {
-      terminal = 0.90;
-      applications = 0.90;
-      popups = 0.50;
-      desktop = 0.90;
+      terminal = 0.9;
+      applications = 0.9;
+      popups = 0.5;
+      desktop = 0.9;
     };
 
     fonts = {
@@ -54,5 +62,10 @@
       package = pkgs.phinger-cursors;
       size = 32;
     };
+  };
+
+  home.keyboard = {
+    layout = "fr";
+    variant = ",";
   };
 }
