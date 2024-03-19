@@ -30,7 +30,7 @@ in
       "files.trimFinalNewlines" = true;
       "files.trimTrailingWhitespace" = true;
       "[javascript]" = {
-        "editor.defaultFormatter" = "esbenp.prettier-vscode";
+        "editor.defaultFormatter" = "dbaeumer.vscode-eslint";
       };
       "[json]" = {
         "editor.defaultFormatter" = "vscode.json-language-features";
@@ -42,7 +42,10 @@ in
         "editor.defaultFormatter" = "yzhang.markdown-all-in-one";
       };
       "[typescript]" = {
-        "editor.defaultFormatter" = "esbenp.prettier-vscode";
+        "editor.defaultFormatter" = "dbaeumer.vscode-eslint";
+      };
+      "[typescriptreact]" = {
+        "editor.defaultFormatter" = "dbaeumer.vscode-eslint";
       };
       "[vue]" = {
         "editor.defaultFormatter" = "octref.vetur";
