@@ -83,7 +83,6 @@ in
       starship
       steam-tui
       steamguard-cli
-      steampipe
       tig
       tomb
       topgrade
