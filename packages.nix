@@ -66,7 +66,7 @@ in
         withNom = true;
       })
       nixpkgs-review-checks
-      nvtop
+      nvtopPackages.full
       oath-toolkit
       p7zip
       pcsx2
