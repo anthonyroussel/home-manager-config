@@ -32,6 +32,7 @@ in
       bruno
       calibre
       chezmoi
+      devenv
       discord
       dislocker
       espeak

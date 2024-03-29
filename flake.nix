@@ -51,7 +51,6 @@
       pkgs = nixpkgs.legacyPackages.${system};
       overlays = [
         (final: prev: {
-          devenv = inputs.devenv.packages."${system}".devenv;
           nixpkgs-review-checks = inputs.nixpkgs-review-checks.packages."${system}".nixpkgs-review-checks;
           shadow-prod = inputs.nur.packages."${system}".shadow-prod;
         })
