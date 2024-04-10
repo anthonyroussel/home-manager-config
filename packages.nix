@@ -50,6 +50,7 @@ in
       jetbrains.ruby-mine
       jetbrains.webstorm
       killall
+      libreoffice
       libsForQt5.gwenview
       libwebp
       lm_sensors

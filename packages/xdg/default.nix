@@ -19,15 +19,16 @@
     };
     mimeApps = {
       enable = true;
-      defaultApplications = config.lib.xdg.mimeAssociations [
-        pkgs.firefox
-        pkgs.gimp
-        pkgs.inkscape
-        pkgs.thunderbird
-        pkgs.transmission-qt
-        pkgs.vlc
-        pkgs.vscode
-      ];
+      defaultApplications = config.lib.xdg.mimeAssociations (with pkgs; [
+        chromium
+        libreoffice
+        thunderbird
+        transmission-qt
+        vlc
+        vscode
+        inkscape
+        gimp
+      ]);
     };
   };
 }
