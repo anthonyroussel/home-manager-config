@@ -9,10 +9,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixpkgs-review-checks = {
-      url = "github:SuperSandro2000/nixpkgs-review-checks";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     nur = {
       url = "github:anthonyroussel/nur-packages";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -51,7 +47,6 @@
       pkgs = nixpkgs.legacyPackages.${system};
       overlays = [
         (final: prev: {
-          nixpkgs-review-checks = inputs.nixpkgs-review-checks.packages."${system}".nixpkgs-review-checks;
           shadow-prod = inputs.nur.packages."${system}".shadow-prod;
         })
         inputs.nix-vscode-extensions.overlays.default

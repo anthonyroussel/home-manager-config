@@ -67,7 +67,6 @@ in
         withSandboxSupport = true;
         withNom = true;
       })
-      nixpkgs-review-checks
       nvtopPackages.full
       oath-toolkit
       p7zip
