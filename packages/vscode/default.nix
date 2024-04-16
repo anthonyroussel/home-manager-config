@@ -6,7 +6,6 @@ let
     bierner.markdown-mermaid
     dbaeumer.vscode-eslint
     esbenp.prettier-vscode
-    github.codespaces
     github.vscode-pull-request-github
     golang.go
     hashicorp.terraform
