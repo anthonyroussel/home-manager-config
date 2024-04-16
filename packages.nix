@@ -60,13 +60,6 @@ in
       mupdf
       nix
       nix-health
-      nixfmt
-      nixpkgs-fmt
-      nixpkgs-hammering
-      (nixpkgs-review.override {
-        withSandboxSupport = true;
-        withNom = true;
-      })
       nvtopPackages.full
       oath-toolkit
       p7zip

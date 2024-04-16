@@ -31,10 +31,6 @@ in
     enable = true;
   };
 
-  programs.nix-index = {
-    enable = true;
-  };
-
   # programs.nix-index = {
   #   enable = true;
   # };
@@ -58,9 +54,6 @@ in
   programs.bash = {
     inherit sessionVariables shellAliases;
     enable = true;
-    initExtra = ''
-      source ${pkgs.nixpkgs-review-checks}/etc/profile.d/nixpkgs-review-checks-hook
-    '';
     historyIgnore = [
       "ls"
       "cd"
