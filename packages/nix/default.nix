@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, nixpkgs, pkgs, ... }:
 
 {
   sops.secrets."nix/access-tokens" = {
@@ -15,8 +15,13 @@
         "flakes"
       ];
     };
+
     extraOptions = ''
       !include ${config.sops.secrets."nix/access-tokens".path}
     '';
+
+    registry = {
+      nixpkgs.flake = nixpkgs;
+    };
   };
 }

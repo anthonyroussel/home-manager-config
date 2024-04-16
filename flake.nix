@@ -79,7 +79,7 @@
         ];
 
         extraSpecialArgs = {
-          inherit nix-secrets;
+          inherit nix-secrets nixpkgs;
         };
       };
     };
