@@ -5,6 +5,7 @@
     ./packages.nix
     ./packages/awscli
     ./packages/brave
+    ./packages/chrome
     ./packages/desktop
     ./packages/direnv
     ./packages/firefox
