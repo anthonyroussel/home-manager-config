@@ -28,7 +28,6 @@ in
       acpi
       anki
       bintools
-      borgbackup
       bruno
       calibre
       chezmoi

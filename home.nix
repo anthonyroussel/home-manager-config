@@ -4,6 +4,7 @@
   imports = [
     ./packages.nix
     ./packages/awscli
+    ./packages/borg
     ./packages/brave
     ./packages/chrome
     ./packages/desktop
