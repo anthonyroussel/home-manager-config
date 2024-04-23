@@ -1,7 +1,7 @@
-{ lib, pkgs, ... }:
+{ inputs, lib, pkgs, ... }:
 
 let
-  extensions = with pkgs.vscode-marketplace; [
+  extensions = with inputs.nix-vscode-extensions.extensions."${pkgs.system}".vscode-marketplace; [
     bbenoist.nix
     bierner.markdown-mermaid
     dbaeumer.vscode-eslint

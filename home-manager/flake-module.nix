@@ -24,10 +24,6 @@
             ];
           }
           {
-            nixpkgs.overlays = [
-              (final: prev: { shadow-prod = inputs.nur.packages."${system}".shadow-prod; })
-              inputs.nix-vscode-extensions.overlays.default
-            ];
             home.username = "aroussel";
             home.homeDirectory = "/home/aroussel";
           }

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 let
   aws = with pkgs; [
@@ -46,6 +46,7 @@ in
       hydra-check
       imagemagick
       inkscape
+      inputs.nur.packages."${pkgs.system}".shadow-prod
       jetbrains.ruby-mine
       jetbrains.webstorm
       killall
@@ -69,7 +70,6 @@ in
       protonvpn-gui
       pup
       rclone
-      shadow-prod
       simplescreenrecorder
       sops
       sox
