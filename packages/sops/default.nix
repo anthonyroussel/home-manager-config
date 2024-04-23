@@ -2,7 +2,7 @@
   pkgs,
   config,
   home,
-  nix-secrets,
+  inputs,
   ...
 }:
 
@@ -19,6 +19,6 @@
       # This will generate a new key if the key specified above does not exist
       generateKey = true;
     };
-    defaultSopsFile = "${nix-secrets}/hm/${config.home.username}.yaml";
+    defaultSopsFile = "${inputs.nix-secrets}/hm/${config.home.username}.yaml";
   };
 }

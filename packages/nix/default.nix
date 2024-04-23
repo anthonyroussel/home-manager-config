@@ -1,4 +1,9 @@
-{ config, nixpkgs, nur, pkgs, ... }:
+{
+  config,
+  inputs,
+  pkgs,
+  ...
+}:
 
 {
   sops.secrets."nix/access-tokens" = {
@@ -21,8 +26,8 @@
     '';
 
     registry = {
-      nixpkgs.flake = nixpkgs;
-      nur.flake = nur;
+      nixpkgs.flake = inputs.nixpkgs;
+      nur.flake = inputs.nur;
     };
   };
 }

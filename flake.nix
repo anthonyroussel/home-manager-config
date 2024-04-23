@@ -5,6 +5,10 @@
     nixpkgs = {
       url = "github:nixos/nixpkgs/nixpkgs-unstable";
     };
+    flake-parts = {
+      url = "github:hercules-ci/flake-parts";
+      inputs.nixpkgs-lib.follows = "nixpkgs";
+    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -32,55 +36,19 @@
   };
 
   outputs =
-    inputs@{
-      self,
-      nixpkgs,
-      home-manager,
-      nix-secrets,
-      nur,
-      sops-nix,
-      stylix,
-      ...
-    }:
-    let
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
-      overlays = [
-        (final: prev: {
-          shadow-prod = inputs.nur.packages."${system}".shadow-prod;
-        })
-        inputs.nix-vscode-extensions.overlays.default
+    inputs:
+    inputs.flake-parts.lib.mkFlake { inherit inputs; } {
+      systems = [ "x86_64-linux" ];
+
+      imports = [
+        ./home/flake-module.nix
+        ./shells/flake-module.nix
       ];
-      nixosModules = import ./modules;
-    in
-    {
-      inherit overlays nixosModules;
 
-      homeManagerModules.aroussel = {
-        inherit (pkgs);
-        imports = [
-          sops-nix.homeManagerModule
-          stylix.homeManagerModules.stylix
-          ./home.nix
-        ];
-        nixpkgs.overlays = overlays;
-      };
-
-      homeConfigurations.aroussel = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-
-        modules = [
-          self.homeManagerModules.aroussel
-          {
-            nixpkgs.overlays = overlays;
-            home.username = "aroussel";
-            home.homeDirectory = "/home/aroussel";
-          }
-        ];
-
-        extraSpecialArgs = {
-          inherit nix-secrets nixpkgs nur;
+      perSystem =
+        { config, pkgs, ... }:
+        {
+          formatter = pkgs.nixfmt-rfc-style;
         };
-      };
     };
 }
