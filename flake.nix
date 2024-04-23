@@ -41,7 +41,7 @@
       systems = [ "x86_64-linux" ];
 
       imports = [
-        ./home/flake-module.nix
+        ./home-manager/flake-module.nix
         ./shells/flake-module.nix
       ];
 
