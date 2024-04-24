@@ -1,7 +1,7 @@
 { mkShell, pkgs }:
 
 mkShell {
-  nativeBuildInputs = with pkgs; [
+  packages = with pkgs; [
     bundix
     hydra-check
     nixfmt-rfc-style

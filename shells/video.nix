@@ -1,7 +1,7 @@
 { mkShell, pkgs }:
 
 mkShell {
-  nativeBuildInputs = with pkgs; [
+  packages = with pkgs; [
     mediainfo
     mkvtoolnix
   ];

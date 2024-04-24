@@ -1,3 +1,3 @@
 { mkShell, pkgs }:
 
-mkShell { nativeBuildInputs = with pkgs; [ poetry ]; }
+mkShell { packages = with pkgs; [ poetry ]; }

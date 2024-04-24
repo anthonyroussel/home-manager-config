@@ -9,7 +9,7 @@ mkShell {
 
   hardeningDisable = [ "format" ];
 
-  nativeBuildInputs = with pkgs; [
+  packages = with pkgs; [
     bun
     corepack_21
     curl

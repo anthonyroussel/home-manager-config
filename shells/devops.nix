@@ -1,7 +1,7 @@
 { mkShell, pkgs }:
 
 mkShell {
-  nativeBuildInputs = with pkgs; [
+  packages = with pkgs; [
     pre-commit
     awscli2
     python3Packages.boto3

@@ -1,3 +1,3 @@
 { mkShell, pkgs }:
 
-mkShell { nativeBuildInputs = with pkgs; [ rpi-imager ]; }
+mkShell { packages = with pkgs; [ rpi-imager ]; }

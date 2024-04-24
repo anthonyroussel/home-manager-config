@@ -8,7 +8,7 @@ mkShell {
 
   hardeningDisable = [ "format" ];
 
-  nativeBuildInputs = with pkgs; [
+  packages = with pkgs; [
     corepack_latest
     lefthook
     nodejs_21

@@ -1,3 +1,3 @@
 { mkShell, pkgs }:
 
-mkShell { nativeBuildInputs = with pkgs; [ ventoy-full ]; }
+mkShell { packages = with pkgs; [ ventoy-full ]; }
