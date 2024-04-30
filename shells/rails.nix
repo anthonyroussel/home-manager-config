@@ -11,12 +11,12 @@ mkShell {
 
   packages = with pkgs; [
     bun
-    corepack_21
+    corepack_latest
     curl
     lefthook
     # required to build psych ruby dependency
     libyaml
-    nodejs_18
+    nodejs_20
     npm-check-updates
     overmind
     pre-commit

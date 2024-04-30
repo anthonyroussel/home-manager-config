@@ -11,7 +11,7 @@ mkShell {
   packages = with pkgs; [
     corepack_latest
     lefthook
-    nodejs_21
+    nodejs_20
     npm-check-updates
     ungoogled-chromium
   ];
