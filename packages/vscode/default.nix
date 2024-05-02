@@ -23,11 +23,6 @@ in
 
     enable = true;
     userSettings = {
-      "editor.insertSpaces" = true;
-      "editor.tabSize" = 2;
-      "files.insertFinalNewline" = true;
-      "files.trimFinalNewlines" = true;
-      "files.trimTrailingWhitespace" = true;
       "[javascript]" = {
         "editor.defaultFormatter" = "dbaeumer.vscode-eslint";
       };
@@ -52,8 +47,17 @@ in
       "[yaml]" = {
         "editor.defaultFormatter" = "redhat.vscode-yaml";
       };
-      "window.zoomLevel" = 0;
       "diffEditor.renderSideBySide" = false;
+      "editor.insertSpaces" = true;
+      "editor.tabSize" = 2;
+      "editor.wordWrap" = "on";
+      "files.eol" = "\n";
+      "files.insertFinalNewline" = true;
+      "files.trimFinalNewlines" = true;
+      "files.trimTrailingWhitespace" = true;
+      "telemetry.telemetryLevel" = "off";
+      "update.mode" = "none";
+      "window.zoomLevel" = 0;
     };
   };
 }
