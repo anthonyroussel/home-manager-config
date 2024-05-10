@@ -4,6 +4,7 @@ mkShell {
   packages = with pkgs; [
     bundix
     hydra-check
+    nix-init
     nixfmt-rfc-style
     nixpkgs-hammering
     (nixpkgs-review.override {
@@ -11,5 +12,6 @@ mkShell {
       withNom = true;
     })
     # nixpkgs-review-checks
+    nurl
   ];
 }
