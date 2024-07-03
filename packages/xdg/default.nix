@@ -25,7 +25,7 @@
           chromium
           libreoffice
           thunderbird
-          transmission-qt
+          transmission_4-qt
           vlc
           vscode
           inkscape

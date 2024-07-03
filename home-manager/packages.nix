@@ -79,7 +79,7 @@ in
       tig
       tomb
       topgrade
-      transmission-qt
+      transmission_4-qt
       tree
       unzip
       upscayl
