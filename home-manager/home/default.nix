@@ -12,7 +12,6 @@
     ./modules/thunderbird
 
     ../../packages/borg
-    ../../packages/brave
     ../../packages/chrome
     ../../packages/desktop
     ../../packages/direnv
