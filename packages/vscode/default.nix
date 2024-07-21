@@ -1,4 +1,9 @@
-{ inputs, lib, pkgs, ... }:
+{
+  inputs,
+  lib,
+  pkgs,
+  ...
+}:
 
 let
   extensions = with inputs.nix-vscode-extensions.extensions."${pkgs.system}".vscode-marketplace; [
@@ -9,6 +14,7 @@ let
     github.vscode-pull-request-github
     golang.go
     hashicorp.terraform
+    jnoortheen.nix-ide
     ms-vscode-remote.remote-containers
     ms-vsliveshare.vsliveshare
     octref.vetur
@@ -17,6 +23,7 @@ let
     yzhang.markdown-all-in-one
   ];
 in
+
 {
   programs.vscode = {
     inherit extensions;
@@ -55,6 +62,9 @@ in
       "files.insertFinalNewline" = true;
       "files.trimFinalNewlines" = true;
       "files.trimTrailingWhitespace" = true;
+      "nix.enableLanguageServer" = true;
+      "nix.formatterPath" = lib.getExe pkgs.nixfmt-rfc-style;
+      "nix.serverPath" = lib.getExe pkgs.nixd;
       "telemetry.telemetryLevel" = "off";
       "update.mode" = "none";
       "window.zoomLevel" = 0;
