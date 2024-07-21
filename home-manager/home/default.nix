@@ -11,7 +11,6 @@
     ./modules/ssh
     ./modules/thunderbird
 
-    ../../packages/borg
     ../../packages/chrome
     ../../packages/desktop
     ../../packages/direnv
