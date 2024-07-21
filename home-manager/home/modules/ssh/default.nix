@@ -17,6 +17,18 @@ in
       path = "${sshConfigPath}/keys/darwin-build-box";
       mode = "0400";
     };
+    "ssh/maftehq" = {
+      path = "${sshConfigPath}/keys/maftehq";
+      mode = "0400";
+    };
+    "ssh/thaivek" = {
+      path = "${sshConfigPath}/keys/thaivek";
+      mode = "0400";
+    };
+    "ssh/lafourmiliere-benevolat" = {
+      path = "${sshConfigPath}/keys/lafourmiliere-benevolat";
+      mode = "0400";
+    };
   };
 
   programs.ssh = {
@@ -39,6 +51,23 @@ in
         user = "git";
         hostname = "github.com";
         identityFile = config.sops.secrets."ssh/github".path;
+        identitiesOnly = true;
+      };
+      "maftehq" = {
+        user = "maftehq";
+        hostname = "ftp.cluster029.hosting.ovh.net";
+        identityFile = config.sops.secrets."ssh/maftehq".path;
+        identitiesOnly = true;
+      };
+      "thaivek" = {
+        user = "thaivek";
+        hostname = "ftp.cluster029.hosting.ovh.net";
+        identityFile = config.sops.secrets."ssh/thaivek".path;
+        identitiesOnly = true;
+      };
+      "*.lafourmiliere-benevolat.fr" = {
+        user = "aroussel";
+        identityFile = config.sops.secrets."ssh/lafourmiliere-benevolat".path;
         identitiesOnly = true;
       };
     };
