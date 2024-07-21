@@ -1,0 +1,20 @@
+[
+  ./chrome
+  ./desktop
+  ./direnv
+  ./firefox
+  ./jq
+  ./nix
+  ./nixpkgs-config
+  ./opengl
+  ./sops
+  ./stylix
+  ./tmpfiles
+  ./tmux
+  ./topgrade
+  ./vim
+  ./vscode
+  ./xdg
+  ./xsession
+  ./zsh
+]

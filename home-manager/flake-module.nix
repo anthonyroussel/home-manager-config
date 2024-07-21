@@ -17,7 +17,7 @@
             _module.args.self = self;
             _module.args.inputs = self.inputs;
 
-            imports = [
+            imports = (import ../packages/module-list.nix) ++ [
               ../modules/git
               inputs.sops-nix.homeManagerModule
               inputs.stylix.homeManagerModules.stylix

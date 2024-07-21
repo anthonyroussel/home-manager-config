@@ -3,32 +3,12 @@
 {
   imports = [
     ./packages.nix
-
     ./modules/awscli
     ./modules/borg
     ./modules/gpg
     ./modules/openstack
     ./modules/ssh
     ./modules/thunderbird
-
-    ../../packages/chrome
-    ../../packages/desktop
-    ../../packages/direnv
-    ../../packages/firefox
-    ../../packages/jq
-    ../../packages/nix
-    ../../packages/nixpkgs-config
-    ../../packages/opengl
-    ../../packages/sops
-    ../../packages/stylix
-    ../../packages/topgrade
-    ../../packages/tmpfiles
-    ../../packages/tmux
-    ../../packages/vim
-    ../../packages/vscode
-    ../../packages/xdg
-    ../../packages/xsession
-    ../../packages/zsh
   ];
 
   rsl.hm-git = {
