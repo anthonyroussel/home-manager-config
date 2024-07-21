@@ -1,6 +1,14 @@
 { lib, pkgs, ... }:
 
 {
+  home.packages = with pkgs; [
+    awsebcli
+    aws-sso-cli
+    eksctl
+    s3cmd
+    awslogs
+  ];
+
   programs.awscli = {
     enable = true;
     settings = {

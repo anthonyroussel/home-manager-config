@@ -1,14 +1,6 @@
 { inputs, pkgs, ... }:
 
 let
-  aws = with pkgs; [
-    awsebcli
-    aws-sso-cli
-    eksctl
-    s3cmd
-    awslogs
-  ];
-
   databases = with pkgs; [
     postgresql_16
     redis
@@ -28,7 +20,6 @@ in
       acpi
       anki
       bintools
-      bruno
       calibre
       chezmoi
       devenv
@@ -47,8 +38,6 @@ in
       imagemagick
       inkscape
       inputs.nur.packages."${pkgs.system}".shadow-prod
-      jetbrains.ruby-mine
-      jetbrains.webstorm
       killall
       libreoffice
       libsForQt5.gwenview
@@ -90,7 +79,6 @@ in
       zbar
       zellij
     ])
-    ++ aws
     ++ databases
     ++ networking;
 }

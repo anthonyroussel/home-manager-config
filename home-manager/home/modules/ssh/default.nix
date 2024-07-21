@@ -21,6 +21,7 @@ in
 
   programs.ssh = {
     enable = true;
+    includes = [ "~/.ssh/config.d/*" ];
     matchBlocks = {
       "build-box.nix-community.org" = {
         user = "anthonyroussel";

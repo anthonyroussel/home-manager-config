@@ -18,9 +18,10 @@
             _module.args.inputs = self.inputs;
 
             imports = [
+              ../modules/git
               inputs.sops-nix.homeManagerModule
               inputs.stylix.homeManagerModules.stylix
-              ./home.nix
+              ./home
             ];
           }
           {
