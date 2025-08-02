@@ -1,6 +1,7 @@
 { callPackage }:
 
 {
+  android = callPackage ./android.nix { };
   buku = callPackage ./buku.nix { };
   devops = callPackage ./devops.nix { };
   front = callPackage ./front.nix { };

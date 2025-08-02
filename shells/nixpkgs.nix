@@ -11,6 +11,8 @@ mkShell {
       withSandboxSupport = true;
       withNom = true;
     })
+    nix-diff
+    nix-update
     # nixpkgs-review-checks
     nurl
   ];
