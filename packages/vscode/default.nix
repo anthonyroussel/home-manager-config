@@ -26,48 +26,49 @@ in
 
 {
   programs.vscode = {
-    inherit extensions;
-
     enable = true;
-    userSettings = {
-      "[javascript]" = {
-        "editor.defaultFormatter" = "dbaeumer.vscode-eslint";
+    profiles.default = {
+      inherit extensions;
+      userSettings = {
+        "[javascript]" = {
+          "editor.defaultFormatter" = "dbaeumer.vscode-eslint";
+        };
+        "[json]" = {
+          "editor.defaultFormatter" = "vscode.json-language-features";
+        };
+        "[jsonc]" = {
+          "editor.defaultFormatter" = "vscode.json-language-features";
+        };
+        "[markdown]" = {
+          "editor.defaultFormatter" = "yzhang.markdown-all-in-one";
+        };
+        "[typescript]" = {
+          "editor.defaultFormatter" = "dbaeumer.vscode-eslint";
+        };
+        "[typescriptreact]" = {
+          "editor.defaultFormatter" = "dbaeumer.vscode-eslint";
+        };
+        "[vue]" = {
+          "editor.defaultFormatter" = "octref.vetur";
+        };
+        "[yaml]" = {
+          "editor.defaultFormatter" = "redhat.vscode-yaml";
+        };
+        "diffEditor.renderSideBySide" = false;
+        "editor.insertSpaces" = true;
+        "editor.tabSize" = 2;
+        "editor.wordWrap" = "on";
+        "files.eol" = "\n";
+        "files.insertFinalNewline" = true;
+        "files.trimFinalNewlines" = true;
+        "files.trimTrailingWhitespace" = true;
+        "nix.enableLanguageServer" = true;
+        "nix.formatterPath" = lib.getExe pkgs.nixfmt-rfc-style;
+        "nix.serverPath" = lib.getExe pkgs.nixd;
+        "telemetry.telemetryLevel" = "off";
+        "update.mode" = "none";
+        "window.zoomLevel" = 0;
       };
-      "[json]" = {
-        "editor.defaultFormatter" = "vscode.json-language-features";
-      };
-      "[jsonc]" = {
-        "editor.defaultFormatter" = "vscode.json-language-features";
-      };
-      "[markdown]" = {
-        "editor.defaultFormatter" = "yzhang.markdown-all-in-one";
-      };
-      "[typescript]" = {
-        "editor.defaultFormatter" = "dbaeumer.vscode-eslint";
-      };
-      "[typescriptreact]" = {
-        "editor.defaultFormatter" = "dbaeumer.vscode-eslint";
-      };
-      "[vue]" = {
-        "editor.defaultFormatter" = "octref.vetur";
-      };
-      "[yaml]" = {
-        "editor.defaultFormatter" = "redhat.vscode-yaml";
-      };
-      "diffEditor.renderSideBySide" = false;
-      "editor.insertSpaces" = true;
-      "editor.tabSize" = 2;
-      "editor.wordWrap" = "on";
-      "files.eol" = "\n";
-      "files.insertFinalNewline" = true;
-      "files.trimFinalNewlines" = true;
-      "files.trimTrailingWhitespace" = true;
-      "nix.enableLanguageServer" = true;
-      "nix.formatterPath" = lib.getExe pkgs.nixfmt-rfc-style;
-      "nix.serverPath" = lib.getExe pkgs.nixd;
-      "telemetry.telemetryLevel" = "off";
-      "update.mode" = "none";
-      "window.zoomLevel" = 0;
     };
   };
 }

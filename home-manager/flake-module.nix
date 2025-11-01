@@ -20,7 +20,7 @@
             imports = (import ../packages/module-list.nix) ++ [
               ../modules/git
               inputs.sops-nix.homeManagerModule
-              inputs.stylix.homeManagerModules.stylix
+              inputs.stylix.homeModules.stylix
               ./home
             ];
           }

@@ -28,24 +28,26 @@ in {
       enable = true;
       package = pkgs.gitFull;
 
-      userEmail = cfg.userEmail;
-      userName = cfg.userName;
+
       signing = {
         key = cfg.signingKey;
         signByDefault = true;
       };
 
-      aliases = {
-        br = "branch";
-        ci = "commit";
-        co = "checkout";
-        lg = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
-        pu = "pull";
-        sh = "show";
-        st = "status -sb";
-      };
-
-      extraConfig = {
+      settings = {
+        aliases = {
+          br = "branch";
+          ci = "commit";
+          co = "checkout";
+          lg = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
+          pu = "pull";
+          sh = "show";
+          st = "status -sb";
+        };
+        user = {
+          email = cfg.userEmail;
+          userName = cfg.userName;
+        };
         core = {
           excludesfile = "${config.home.homeDirectory}/.gitignore";
         };

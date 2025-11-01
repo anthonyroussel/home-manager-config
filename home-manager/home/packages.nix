@@ -55,7 +55,6 @@ in
       pcsx2
       podman
       powerline-fonts
-      protonvpn-cli
       protonvpn-gui
       pup
       rclone
@@ -73,7 +72,6 @@ in
       unzip
       upscayl
       vlc
-      whatsapp-for-linux
       xclip
       yq-go
       zbar
