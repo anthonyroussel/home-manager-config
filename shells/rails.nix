@@ -16,12 +16,13 @@ mkShell {
     lefthook
     # required to build psych ruby dependency
     libyaml
-    nodejs_20
+    nodejs_22
     npm-check-updates
     overmind
     pre-commit
+    postgresql_16
     python311
-    ruby_3_3
+    ruby_3_4
     ungoogled-chromium
     tmux
     yarn
