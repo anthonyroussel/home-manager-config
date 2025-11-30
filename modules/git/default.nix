@@ -35,7 +35,7 @@ in {
       };
 
       settings = {
-        aliases = {
+        alias = {
           br = "branch";
           ci = "commit";
           co = "checkout";
