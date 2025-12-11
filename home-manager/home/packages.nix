@@ -20,7 +20,6 @@ in
       acpi
       anki
       bintools
-      calibre
       chezmoi
       devenv
       discord
