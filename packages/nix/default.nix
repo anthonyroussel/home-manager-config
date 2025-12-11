@@ -30,4 +30,14 @@
       nur.flake = inputs.nur;
     };
   };
+
+  programs.nh = {
+    enable = true;
+    homeFlake = "$HOME/src/home-manager-config";
+    osFlake = "$HOME/src/nixos-config";
+    clean = {
+      enable = true;
+      extraArgs = "--keep 3 --keep-since 3d";
+    };
+  };
 }
