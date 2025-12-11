@@ -15,7 +15,7 @@
     enable = true;
     userName = "Anthony ROUSSEL";
     userEmail = "anthony@roussel.dev";
-    signingKey = "472D368AF107F443F3A5C7129DC4987B1A55E75E";
+    signingKey = "3C0F42EBCD0C8CCFD0F7E51F2E44EB570B6688B3";
   };
 
   # This value determines the Home Manager release that your
