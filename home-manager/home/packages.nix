@@ -39,7 +39,6 @@ in
       inputs.nur.packages."${pkgs.system}".shadow-prod
       killall
       libreoffice
-      libsForQt5.gwenview
       libwebp
       lm_sensors
       mdcat
@@ -57,6 +56,7 @@ in
       protonvpn-gui
       pup
       rclone
+      secretspec
       simplescreenrecorder
       sops
       sox
