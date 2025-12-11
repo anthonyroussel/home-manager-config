@@ -32,5 +32,8 @@ mkShell {
     tfupdate
     terrascan
     terraspace
+
+    # Kubernetes
+    kubernetes-helm
   ];
 }
