@@ -18,8 +18,8 @@
     base16Scheme = "${pkgs.base16-schemes}/share/themes/solarflare.yaml";
 
     image = pkgs.fetchurl {
-      url = "https://raw.githubusercontent.com/NixOS/nixos-artwork/master/wallpapers/NixOS-Gradient-grey.png";
-      hash = "sha256-Tf4Xruf608hpl7YwL4Mq9l9egBOCN+W4KFKnqrgosLE=";
+      url = "https://brand.nixos.org/logos/nixos-logo-default-gradient-white-regular-horizontal-recommended.svg";
+      hash = "sha256-zCQDqFrqkJu/so4rCoblYJHEkPR8KiE1C1cKf7xqGZo=";
     };
 
     polarity = "dark";

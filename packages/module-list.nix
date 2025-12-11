@@ -1,4 +1,5 @@
 [
+  ./calibre
   ./chrome
   ./desktop
   ./direnv
