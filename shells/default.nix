@@ -7,6 +7,7 @@
   front = callPackage ./front.nix { };
   gcloud = callPackage ./gcloud.nix { };
   golang = callPackage ./golang.nix { };
+  java = callPackage ./java.nix { };
   nixpkgs = callPackage ./nixpkgs.nix { };
   packer = callPackage ./packer.nix { };
   python = callPackage ./python.nix { };
