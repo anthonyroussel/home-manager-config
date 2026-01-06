@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 let
   sessionVariables = {
@@ -31,9 +31,9 @@ in
     enable = true;
   };
 
-  # programs.nix-index = {
-  #   enable = true;
-  # };
+  programs.nix-index = {
+    enable = true;
+  };
 
   programs.ripgrep = {
     enable = true;
@@ -64,6 +64,7 @@ in
   programs.zsh = {
     inherit sessionVariables shellAliases;
     enable = true;
+    dotDir = "${config.xdg.configHome}/zsh";
     history = {
       ignorePatterns = [
         "*prod*"
