@@ -2,11 +2,13 @@
 
 mkShell {
   shellHook = ''
-    export TF_PLUGIN_CACHE_DIR=$HOME/.terraform.d/plugin-cache
+    export TF_PLUGIN_CACHE_DIR="$HOME/.terraform.d/plugin-cache"
+    mkdir -p "$TF_PLUGIN_CACHE_DIR"
   '';
 
   packages = with pkgs; [
     pre-commit
+    openstackclient-full
     awscli2
     python3Packages.boto3
     python3Packages.botocore
@@ -26,6 +28,7 @@ mkShell {
     opentofu
     trivy
     terraform-docs
+    terraform-plugin-docs
     tflint
     terramate
     terragrunt
