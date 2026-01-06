@@ -9,10 +9,10 @@ mkShell {
   hardeningDisable = [ "format" ];
 
   packages = with pkgs; [
-    corepack_latest
     lefthook
-    nodejs_20
+    nodejs_24
     npm-check-updates
+    pnpm
     ungoogled-chromium
   ];
 }
