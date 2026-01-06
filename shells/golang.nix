@@ -1,3 +1,9 @@
 { mkShell, pkgs }:
 
-mkShell { packages = with pkgs; [ go ]; }
+mkShell {
+  packages = with pkgs; [
+    go
+    golangci-lint
+    gopls
+  ];
+}
