@@ -63,7 +63,7 @@ in
         "files.trimFinalNewlines" = true;
         "files.trimTrailingWhitespace" = true;
         "nix.enableLanguageServer" = true;
-        "nix.formatterPath" = lib.getExe pkgs.nixfmt-rfc-style;
+        "nix.formatterPath" = lib.getExe pkgs.nixfmt;
         "nix.serverPath" = lib.getExe pkgs.nixd;
         "telemetry.telemetryLevel" = "off";
         "update.mode" = "none";

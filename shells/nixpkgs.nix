@@ -5,7 +5,7 @@ mkShell {
     bundix
     hydra-check
     nix-init
-    nixfmt-rfc-style
+    nixfmt
     nixpkgs-hammering
     (nixpkgs-review.override {
       withSandboxSupport = true;
