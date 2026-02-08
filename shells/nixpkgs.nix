@@ -7,10 +7,7 @@ mkShell {
     nix-init
     nixfmt
     nixpkgs-hammering
-    (nixpkgs-review.override {
-      withSandboxSupport = true;
-      withNom = true;
-    })
+    nixpkgs-reviewFull
     nix-diff
     nix-update
     # nixpkgs-review-checks
