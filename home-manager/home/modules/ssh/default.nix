@@ -29,6 +29,10 @@ in
       path = "${sshConfigPath}/keys/lafourmiliere-benevolat";
       mode = "0400";
     };
+    "ssh/openstack-gerrit" = {
+      path = "${sshConfigPath}/keys/openstack-gerrit";
+      mode = "0400";
+    };
   };
 
   programs.ssh = {
@@ -70,6 +74,12 @@ in
         user = "aroussel";
         identityFile = config.sops.secrets."ssh/lafourmiliere-benevolat".path;
         identitiesOnly = true;
+      };
+      "review.opendev.org" = {
+        host = "review.opendev.org";
+        port = 29418;
+        user = "anthonyrsl";
+        identityFile = config.sops.secrets."ssh/openstack-gerrit".path;
       };
     };
   };
